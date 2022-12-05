@@ -11,6 +11,10 @@ export default function App() {
     renderCount.current += 1;
   });
 
+  const focus = () => {
+    console.log(inputRef.current)
+  }
+
   return (
     <div className="App">
       <input
@@ -20,6 +24,7 @@ export default function App() {
       />
       <div>My name is {name}</div>
       <div>I rendered {renderCount.current} times</div>
+      <button onClick={focus}>Focus</button>
     </div>
   );
 }
